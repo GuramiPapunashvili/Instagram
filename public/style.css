@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .phone-image {
+    display: none;
+  }
+  
+  .login-form {
+    width: 350px;
+  }
+  
+  .form-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    font-family: 'Billabong', cursive;
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .input-box {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fafafa;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .separator .line {
+    height: 1px;
+    width: 100%;
+    background-color: #dbdbdb;
+  }
+  
+  .separator p {
+    margin: 0 10px;
+    font-size: 12px;
+    color: #8e8e8e;
+  }
+  
+  .facebook-login {
+    margin-top: 10px;
+  }
+  
+  .facebook-login a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #385185;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .facebook-login img {
+    width: 20px;
+    margin-right: 8px;
+  }
+  
+  .forgot-password {
+    color: #00376b;
+    font-size: 12px;
+    margin-top: 15px;
+    display: block;
+  }
+  
+  .signup-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .signup-box a {
+    color: #0095f6;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .app-download {
+    text-align: center;
+  }
+  
+  .app-download p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .app-links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .app-links a {
+    margin: 0 5px;
+  }
+  
+  .app-links img {
+    width: 136px;
+  }
+  
+  @media (min-width: 1000px) {
+    .container {
+      width: 900px;
+      justify-content: space-between;
+    }
+  
+    .phone-image {
+      display: block;
+      margin-right: 30px;
+    }
+  
+    .login-form {
+      width: 380px;
+    }
+  }
+
+  h1{
+    color: grey;
+  }
+  

